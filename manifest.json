@@ -1,0 +1,28 @@
+{
+    "name": "HLTV Score Hider",
+    "version": "0.0.1",
+    "description": "Hide outcomes in HLTV to keep the suspense",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.hltv.org/*"
+            ],
+            "js": [
+                "hideScores.js"
+            ]
+        }
+    ],
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "declarativeContent", "activeTab", "storage"
+    ]
+}
