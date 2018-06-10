@@ -15,3 +15,13 @@ Array.from(resultsLost).map(result => {
 Array.from(resultsScores).map(score => {
     score.style.visibility = "visible";
 });
+
+
+var divTeam = document.querySelectorAll('.match-page div.team');
+
+Array.from(divTeam).map(el => {
+	let scores = el.querySelectorAll('.team > div > div');
+	Array.from(scores).map(score => {
+		score.style.visibility = 'visible';
+    });
+});
